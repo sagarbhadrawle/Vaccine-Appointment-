@@ -21,7 +21,7 @@ import lombok.Data;
 public class Appointment {
 
 	 @Id
-	 @GeneratedValue(strategy =  GenerationType.IDENTITY)
+	 @GeneratedValue(strategy = 	 GenerationType.IDENTITY)
 	 private Integer bookingId;
 	 
 	 private Long mobileNo;

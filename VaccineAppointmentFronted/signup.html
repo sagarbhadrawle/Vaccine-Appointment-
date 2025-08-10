@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/index.css" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #registerForm {
+      width: 30%;
+      margin: auto;
+      margin-top: 100px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+   
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./images/logo.png" alt="Logo" width="50" height="50">
+          </a>
+  
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+             <a class="nav-link" href="./appointment.html">BookAppointment</a>
+              <a class="nav-link" href="./member.html">MemberStatusPage</a>
+              
+            </div>
+      
+            <div class="navbar-nav">
+              <a class="nav-link" href="./login.html">Login</a>
+              <a class="nav-link" href="./signup.html">Signup</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+   <div id="registerForm">
+    <form id="registerFormElem">
+      <h4 class="text-center mb-3"><strong>Create an Account</strong></h4>
+
+      <input type="text" placeholder="Name*" id="name" required minlength="2" maxlength="20" />
+      <input type="date" placeholder="Date of Birth*" id="dob" required />
+      <select id="gender" required>
+        <option value="">Select Gender*</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" placeholder="Address*" id="address" required minlength="2" maxlength="80" />
+      <input type="text" placeholder="City*" id="city" required minlength="2" maxlength="40" />
+      <input type="text" placeholder="State*" id="state" required minlength="2" maxlength="40" />
+      <input type="text" placeholder="Pincode*" id="pincode" pattern="^[1-9][0-9]{5}$" required />
+      <input type="email" placeholder="Email*" id="email" required />
+      <input type="password" placeholder="Password*" id="password" required />
+      <select id="role" required>
+        <option value="">Select Role*</option>
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
+      <input type="text" placeholder="PAN Number" id="panNo" />
+      <input type="text" placeholder="Aadhar Number*" id="aadharNo" required />
+      
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+
+  <script src="./script/signup.js"></script>
+</body>
+
+</html>

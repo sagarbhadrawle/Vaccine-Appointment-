@@ -17,12 +17,12 @@ import com.vaccine.model.User;
 import com.vaccine.repositoy.UserRepository;
 
 @Service
-public class JWTUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
 	private UserRepository ur;
 
 	@Autowired
-	public JWTUserDetailsService(UserRepository ur) {
+	public UserDetailsServiceImpl(UserRepository ur) {
 		super();
 		this.ur = ur;
 	}
@@ -37,7 +37,7 @@ public class JWTUserDetailsService implements UserDetailsService {
 
 			User user = opt.get();
 
-			System.out.println(user.getEmail() + " " + user.getRole());
+//			System.out.println(user.getAadharNo() + " " + user.getRole());
 
 			List<GrantedAuthority> authorities = new ArrayList<>();
 

@@ -94,11 +94,11 @@ public class UserController {
 	}
 
 	@GetMapping("/auth/login")
-	public ResponseEntity<String> getUserById(Authentication auth) throws InvalidUserException {
+	public ResponseEntity<User> getUserById(Authentication auth) throws InvalidUserException {
 		System.out.println("Auth");
 
 		User user = userService.getUserByAadharNo(auth.getName());
-		return new ResponseEntity<String>(user.getName(), HttpStatus.ACCEPTED);
+		return new ResponseEntity<User>(user, HttpStatus.ACCEPTED);
 	}
 
 }

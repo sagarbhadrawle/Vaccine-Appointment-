@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaccination Successful</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body {
+      background-color: #e8f5e9;
+    }
+    .success-box {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-top: 100px;
+    }
+    .success-icon {
+      font-size: 70px;
+      color: #28a745;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="success-box">
+      <div class="success-icon">✔</div>
+      <h2>Vaccination Successful</h2>
+      <p>You have been successfully vaccinated.</p>
+
+      <div id="vaccineDetails" class="mt-4"></div>
+
+      <a href="index.html" class="btn btn-success mt-4">Go to Home</a>
+      <a href="#" class="btn btn-outline-success mt-4">Download Certificate</a>
+    </div>
+  </div>
+
+  <script>
+    // If you want to show vaccine name and date from query params
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const date = params.get("date");
+
+    if (name && date) {
+      document.getElementById("vaccineDetails").innerHTML = `
+        <h5>Vaccine Details:</h5>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Date:</strong> ${date}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

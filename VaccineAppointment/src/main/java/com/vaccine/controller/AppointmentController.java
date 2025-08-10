@@ -29,7 +29,7 @@ import com.vaccine.service.AppointmentService;
  */
 
 @RestController
-@CrossOrigin("*")
+
 public class AppointmentController {
 
 	@Autowired
