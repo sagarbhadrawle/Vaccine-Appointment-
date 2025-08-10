@@ -19,6 +19,12 @@ flex-direction: row-reverse;
 
 }
 
+@media (max-width: 768px) {
+  img[alt="Vaccine"] {
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 #main{
