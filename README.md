@@ -1,6 +1,6 @@
 # Vaccine Appointment System
 
-![Vaccine Logo](logo.png)
+![Vaccine Logo](https://github.com/sagarbhadrawle/Vaccine-Appointment-/blob/main/VaccineAppointmentFronted/images/logo.png)
 
 ## 📖 Overview
 The **Vaccine Appointment System** is a Spring Boot-based application that helps users register, book appointments, and track vaccination details.  
